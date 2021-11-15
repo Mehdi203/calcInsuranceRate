@@ -1,0 +1,138 @@
+<!--
+Name: Mohammadmehdi(Mehdi) Noroozi
+Student ID: 000880871
+Date: July 14, 2021
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/javascript.js"></script>
+
+</head>
+
+<body>
+
+    <div class="banner">
+        <h1 id="header1">Welcome to Kwality Insurance</h1>
+        <p id="par1">We provide the best value for your car insurance</p>
+ 
+    </div>
+
+    <div class="main_content">
+ 
+        <h2 id="header2">Please Complete the Following Registration Form:</h2>
+
+        <!-- personal information input  -->
+
+        <form class="form1" name="form1" onsubmit="return validateForm1()" >
+
+            <table id="table1">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" id="fname" name="fname" placeholder="Your name..."></td>
+                    <td>Last Name</td>
+                    <td><input type="text" id="lname" name="lname" placeholder="Your last name..."></td>
+
+                </tr>
+
+
+                <tr>
+                    <td>Address Line 1</td>
+                    <td><input type="text" id="address1" name="address1" placeholder="Address line 1..."></td>
+                    <td>Address Line 2</td>
+                    <td><input type="text" id="address2" name="address2" placeholder="Address line 2..."></td>
+                </tr>
+
+                <tr>
+                    <td>Postal Code</td>
+                    <td><input type="text" id="postcode" name="postcode" placeholder="T3G 0C3"
+                            pattern="[ A-Za-z][0-9][ A-Za-z] [0-9][ A-Za-z][0-9]"></td>
+
+                    <td>Email Address</td>
+                    <td><input type="email" id="email" name="email" placeholder="John.smith@gmail.com"
+                            onsubmit="checkPostal(postal) "></td>
+                </tr>
+
+            </table>
+            <input type="submit" id="submit" value="Submit">
+            <button type="reset" id="reset" value="Reset">Reset</button>
+
+        </form>
+
+
+        <h2 id="header2">Please Provide us With the Following Information:</h2>
+
+        <!-- select number of tickets  -->
+
+
+        <form class="form2">
+            <select name="" id="ticket" required>
+                <option value="">Select Number of Tickets</option>
+                <option value="0">0 Ticket</option>
+                <option value="1">1 Ticket</option>
+                <option value="2">2 Tickets</option>
+                <option value="3">3 Tickets</option>
+                <option value="4">4 or more Ticket</option>
+
+            </select>
+
+        </form>
+
+
+        <form class="form3" name="form3">
+
+            <!-- Input car value and age  -->
+
+            <table id="table2">
+                <tr>
+                    <td>Value of your Car</td>
+                    <td><input type="number" id="carValue" name="carValue" min="500" step="500" required></td>
+
+                </tr>
+                <tr>
+                    <td>Your Age</td>
+                    <td><input type="number" id="age" name="age" min="16" step="1" required></td>
+                </tr>
+
+            </table>
+            <br>
+
+            <input type="button" id="calperm" onclick="calcrate()" value="Calculate Rate ">
+            <input type="reset" id="reset2" onclick="calcrate()" value="Reset ">
+        </form>
+
+       
+  
+        <!-- creating space to write the calculation results  -->
+        <div class="answer">
+            <p>We need all information above to be able to provide you
+                an estimate. Please scroll down to see the breakdown of the total cost.
+            </p>
+
+            <h2 id="frate"></h2>
+            <h3 id="breakdown"></h3>
+            <h4 id="base_rate"></h4>
+            <h4 id="age_perm"></h4>
+            <h4 id="tick_perm"></h4>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
+
+<!--
+Name: Mohammadmehdi(Mehdi) Noroozi
+Student ID: 000880871
+Date: July 14, 2021
+-->
